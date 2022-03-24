@@ -6,7 +6,7 @@
 :root{
      font-weight: var(--font-weight-8);
      font-size: var(----font-size-5);
-     /* background-image: var(--gradient-4), var(--noise-1); */
+     background-image: var(--gradient-4), var(--noise-1);
      font-family: var(--font-sans);
      background-size: cover;
 }
