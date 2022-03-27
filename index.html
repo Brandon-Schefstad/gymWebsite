@@ -17,16 +17,14 @@
 	<body class="body">
 		<div id="wrapper">
 		<!-- Nav -->
-		<nav> 
-			<ul class="clear">
-				<li>For Men</li>
-				<li>For Women</li>
-				<li>Accessories</li>
-			<span>TestNav (Replace with image)</span>
-			<img src="" alt="">
-				<li class="aboutUs">About Us</li>
-				<li class="aboutUs">My Account</li>
-			</ul>
+		<nav class="nav"> 
+				<li class="nav__link">For Men</li>
+				<li class="nav__link">For Women</li>
+				<li class="nav__link">Accessories</li>
+				<!-- <li class="nav__link nav__mirin"><img src="mirin.png" class="nav__mirinImage" alt=""></li> -->
+				<li class="nav__link">About Us</li>
+				<li class="nav__link">My Account</li>
+				<li class="nav__link"><img class="nav__search" src="/gymProject/search.svg" alt=""></li>
 		</nav>
 		<!-- Section1 -->
 		<section class="section1">
@@ -53,19 +51,45 @@
 				<img class="stretching" src="https://blog.nasm.org/hubfs/benefits-of-stretching.jpg" alt="">
 				<section class="fiftyPercent3">
 					<a href="https://google.com"><img class="tanktop" src="https://i.pinimg.com/736x/b3/de/fe/b3defe075ad62b8118e309a844f6dedc.jpg" alt=""></a>
-					<div class="mensCollection">
-						<button class="l">L</button>
-						<button class="r">R</button>
-						<span class="uppercase">Browse all</span>
-						<span class="uppercase">MENS</span>
-						<span class="uppercase">COLLECTION</span>
+					<div class="collectionGrid mensCollection">
+							<button class="collection__l">L</button>
+							<button class="collection__r">R</button>
+							<span class="uppercase collection__smallText">Browse all</span>
+							<span class="uppercase collection__largeText">MENS</span>
+							<span class="uppercase collection__smallText">COLLECTION</span>
 					</div>
 			</section>	
 			</section>
 		</section>
-		<section class="section3">
-
+		<section class="womensPreview">
+			<div class="womensPreview__card--small">
+				<img src="https://s3.amazonaws.com/prod.skimble/assets/4031/skimble-workout-trainer-exercise-four-square-hops-1_iphone.jpg" alt="">
+			</div>
+			<div class="womensPreview__card--small">
+				<img src="https://media1.popsugar-assets.com/files/thumbor/oStCU38qB6hu1AHCJ5CyLBQ6TAY/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/02/27/986/n/1922729/6982a2275c7711f34ee2e8.35687035_/i/Why-Women-Work-Out.jpg" alt="">
+			</div>
+			<div class="womensPreview__card--large">
+				<img src="https://beyondwords.life/wp-content/uploads/2018/09/women-who-work-out-with-ropes.jpg" class="womensPreview__card--large" alt="">
+			</div>
+			<div class="womensPreview__card--large">
+				<img src="https://s3.envato.com/files/256848109/EE4I3625%20copy.jpg" class="womensPreview__card--large" alt="">
+			</div>
+			<div class="womensPreview__card--large collectionGrid">
+					<button class="collection__l">L</button>
+					<button class="collection__r">R</button>
+					<span class="uppercase collection__smallText">Browse all</span>
+					<span class="uppercase collection__largeText">WOMENS</span>
+					<span class="uppercase collection__smallText">COLLECTION</span>
+			</div>
 		</section>
+		<div class="aboutUs">
+			<img src="https://images.unsplash.com/photo-1508050249562-b28a87434496?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+			<div class="aboutUs__text">
+				<h1 class="aboutUs__heading uppercase"> About Us</h1>
+				<p class="aboutUs__information"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt libero nunc, ut interdum est pulvinar pharetra. Sed sollicitudin a dui sit amet vestibulum. Vestibulum sit amet faucibus est. In pretium, sem et congue finibus, massa nunc placerat nunc, eu eleifend augue ante non dui. Praesent ut mattis est. Proin maximus sit amet mi vitae porttitor. Nam non volutpat neque. Nam interdum sed lorem quis feugiat. Duis eu lorem tempor, ultricies risus in, commodo enim.</p>
+				<button class="shopNow lightBlueWhiteText uppercase">Learn More</button>
+			</div>
+		</div>
 	</div>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
