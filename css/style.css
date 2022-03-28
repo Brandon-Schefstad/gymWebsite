@@ -96,7 +96,7 @@ select {
      width:100%;
      place-items:center;
      /* background-color: #E7B88D; */
-     background-image:linear-gradient(0deg,#E7B88D,#FFFFFF)
+     background-image:linear-gradient(0deg,#C19A6C,#FFFFFF)
 }
 .nav__link{
      display:flex;
@@ -109,7 +109,7 @@ select {
      width:100%;
      height:100%;
      border: 2px solid #804C36;
-     color:#764A34;
+     color:#613d2c;
 }
 .nav__search{
      height:60%;
