@@ -192,7 +192,7 @@ input, button{
 /*******************************************/
 #wrapper {
 	/* border: 1px solid rgb(184, 46, 46); */
-	width: 1100px;
+	width: 1200px;
 	margin: auto;
      overflow: hidden;
 }
@@ -220,9 +220,10 @@ input, button{
 }
 .section1--image{
      max-height: 100%;
+     width:1200px;
 }
 
-.divided{
+/* .divided{
      position:relative;
 }
 .divided::after{
@@ -233,7 +234,7 @@ input, button{
      height: 15px;
      max-width:100%;
      right: 26%;
-}
+} */
 
 .section1::after{
      top:66%;
@@ -247,20 +248,62 @@ input, button{
 /******************************************
 /* #MENS PREVIEW
 /*******************************************/
+.mensPreview{
+     display:grid;
+     z-index:1;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(2,18rem);
+     max-width:100%;
+     max-height:80%;
+     gap:1rem;
+     margin-top:1rem;
+
+}
+.mensPreview__card--large--tall{
+     grid-row-start: span 2;
+     position:relative;
+     width:100%;
+     height:97%;
+}
 .banner{
-     display:flex;
-     flex-direction: column;
-     justify-content: center;
      position: absolute;
      text-align: center;
      bottom: 0%;
      right:33px;
-     width:96.45%;
      height:15%;
      padding: 2rem 2rem;
      font-size:var(--font-size-4);
      line-height: 1.5rem;
 }
+.mensPreview__card--large--wide{
+     grid-column-start: span 2;
+     grid-row-start: span 2;
+     position:relative;
+     justify-content: center;
+     align-self:center;
+}
+.mensPreview__card--large--tall__image{
+     position:absolute;
+     top: 15px;
+     height:100%;
+     width: 110%;
+}
+.mensPreview__card--large--tall__button{
+     position:absolute;
+     bottom:20%;
+     z-index: 3;
+}
+.offset{
+     right:20%;
+}
+.mensPreview__card--small{
+     grid-row-start: auto;
+     position:relative;
+     top:-27px;
+}
+
+
+
 .bold{
      font-weight: var(--font-weight-7);
 }
@@ -276,38 +319,7 @@ input, button{
 .uppercase{
      text-transform: uppercase;
 }
-.section2{
-          display:flex;
-     flex-direction: row;
-     margin-top:1rem;
-     padding: 0 1rem 1rem 1rem;
-}
-.fiftyPercent{
-     max-width: 45%;
-     text-align: center;
-     position: relative;
-     padding-right: 1rem;
-}
-.fiftyPercent__image{
-     margin-left:-1rem;
-     position:relative;
-}
-.stretching{
-     float:left;
-}
-.fiftyPercent2{
-     height: 320px;
-     margin-right:-1rem;
-}
-.fiftyPercent3{
-     display:flex;
-     height: 320px;
-     clear:both;
-}
-.tanktop{
-     padding: 1rem 1rem 1rem 0; 
-     height:103%;
-}
+
 
 
 /******************************************
@@ -344,10 +356,7 @@ input, button{
      text-align:center;
      place-self: center;
 }
-.mensCollection{
-     margin-top:1rem;
-     height:93%;
-}
+
 
 /******************************************
 /* #WOMENS PREVIEW
@@ -360,8 +369,8 @@ input, button{
      max-width:100%;
      overflow:visible;
      justify-content: center;
-     gap:0.5rem;
-     margin-top:1rem;
+     gap:1rem;
+     margin-bottom:2rem;
 
 }
 .womensPreview__card--small{
