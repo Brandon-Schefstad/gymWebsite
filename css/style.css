@@ -95,7 +95,8 @@ select {
      height:40px;
      width:100%;
      place-items:center;
-     background-color: #E7B88D;
+     /* background-color: #E7B88D; */
+     background-image:linear-gradient(0deg,#E7B88D,#FFFFFF)
 }
 .nav__link{
      display:flex;
@@ -359,7 +360,7 @@ input, button{
      max-width:100%;
      overflow:visible;
      justify-content: center;
-     gap:1.5rem;
+     gap:0.5rem;
      margin-top:1rem;
 
 }
