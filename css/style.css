@@ -222,7 +222,7 @@ input, button{
 }
 
 .divided::after{
-     content:url("/gymProject/images/line-divider-transparent-6.png");
+     content:url("../images/line-divider-transparent-6.png");
      z-index: 2;
      position:absolute;
      display: block;
