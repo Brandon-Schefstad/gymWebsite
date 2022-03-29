@@ -129,7 +129,7 @@ select {
 .nav__submenu{
      display:none;
      position:absolute;
-     min-width:calc(100%);
+     min-width:100%;
      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
      background-color:#C19A6C;
      border-top:3px solid #613d2c;
@@ -143,6 +143,7 @@ select {
 .nav__link:hover .nav__submenu {display: block;}
 .nav__submenu a {
      color: #613d2c;
+     position:relative;
      padding: 12px 16px;
      text-decoration: none;
      display: block;
@@ -259,6 +260,19 @@ input, button{
 }
 .divided{
      margin-bottom:3rem;
+     position:relative;
+}
+.divided::after{
+     content:'';
+     position:absolute;
+     bottom:-1.7rem;
+     left:10%;
+     display:block;
+     z-index:2;
+     height:0.5rem;
+     width: 80%;
+     margin:auto;
+     background: #FFFFFF;
 }
 /* .divided{
      position:relative;
@@ -407,7 +421,6 @@ input, button{
      display:grid;
      grid-template-columns: repeat(4,1fr);
      grid-template-rows: repeat(2,1fr);
-     height:50rem;
      max-width:100%;
      overflow:visible;
      justify-content: center;
@@ -429,7 +442,6 @@ input, button{
 /*******************************************/
 .aboutUs{
      min-height:100%;
-     padding-top:2rem;
      position:relative;
 }
 .aboutUs__text{
@@ -439,9 +451,43 @@ input, button{
      bottom: 25%;
      right:10%;
 }
-.aboutUs__heading{
-
-}
 .aboutUs__information{
      font-weight:var(--font-weight-2);
+}
+
+
+/******************************************
+/* #EXPERIMENTAL
+/*******************************************/
+
+
+.nav__submenu__text__submenu{
+     display:none;
+     
+     position:relative;
+     right:-11.1rem;
+     top:-1rem;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     background-color:#C19A6C;
+     color:black;
+     width:100%;
+}
+.nav__submenu__text:hover .nav__submenu__text__submenu {
+     display:flex;
+     flex-wrap: nowrap;
+     position:absolute;
+     flex-direction: column;
+     align-content: center;
+     width:95%;
+}
+.nav__submenu__text__submenu_text{
+     border:3px solid #613d2c;
+     text-align: center;
+     padding: 0.5rem 1rem;
+     margin-left:-2.5rem;
+     text-decoration: none;
+}
+.nav__submenu__text__submenu_text:hover{
+     color:#FFFFFF;
+     background-color: #613d2c;
 }
