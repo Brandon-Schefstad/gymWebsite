@@ -89,17 +89,18 @@ select {
 /* Nav */
 .nav{
      display:grid;
-     /* gap:1rem; */
+     position:relative;
      grid-template-columns: repeat(6,1fr);
      grid-template-rows: 1fr;
-     height:40px;
+     height: 2rem;
      width:100%;
      place-items:center;
-     /* background-color: #E7B88D; */
-     background-image:linear-gradient(0deg,#C19A6C,#FFFFFF)
+     background-image:linear-gradient(0deg,#C19A6C,#FFFFFF);
+     z-index:1;
 }
+
 .nav__link{
-     display:flex;
+     position:relative;
      align-items:center;
      justify-content: center;
      grid-column-start: auto;
@@ -110,13 +111,45 @@ select {
      height:100%;
      border: 2px solid #804C36;
      color:#613d2c;
+     
 }
+.nav__link:hover{
+     background-image:linear-gradient(180deg,#C19A6C,#FFFFFF)
+}
+
 .nav__search{
      height:60%;
      align-self: center;
      justify-self:center;
 }
-
+.nav__link__text{
+     text-decoration: none;
+     color:black;
+}
+.nav__submenu{
+     display:none;
+     position:absolute;
+     min-width:calc(100%);
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     background-color:#C19A6C;
+     border-top:3px solid #613d2c;
+     top:1.8rem;
+     z-index:1000;
+}
+.nav__submenu a:hover {
+     background-color: #804C36;
+     display:block;
+}
+.nav__link:hover .nav__submenu {display: block;}
+.nav__submenu a {
+     color: #613d2c;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+}
+.nav__submenu a:hover{
+     color:#FFFFFF
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -141,7 +174,9 @@ select {
      color: antiquewhite;
      font-weight:var(--font-weight-2);
 }
-
+.lightBlueWhiteText:hover{
+     background-color: #015161;
+}
 
 
 /******************************************
@@ -216,16 +251,18 @@ input, button{
      display:flex;
      position:relative;
      max-width:100%;
-     padding-bottom:1rem;
 }
 .section1--image{
      max-height: 100%;
      width:1200px;
+     z-index:-1;
 }
-
+.divided{
+     margin-bottom:3rem;
+}
 /* .divided{
      position:relative;
-}
+} 
 .divided::after{
      content:url("../images/line-divider-transparent-6.png");
      z-index: 2;
@@ -234,7 +271,7 @@ input, button{
      height: 15px;
      max-width:100%;
      right: 26%;
-} */
+} 
 
 .section1::after{
      top:66%;
@@ -244,65 +281,70 @@ input, button{
 }
 .womensPreview::after{
      top: 70%;
-}
+}*/
 /******************************************
 /* #MENS PREVIEW
 /*******************************************/
 .mensPreview{
      display:grid;
      z-index:1;
-     grid-template-columns: repeat(3,1fr);
-     grid-template-rows: repeat(2,18rem);
+     grid-template-columns: 2.05fr 1fr 1fr;
+     grid-template-rows: 20rem 20rem 17.8rem;
      max-width:100%;
-     max-height:80%;
+     min-height:100%;
      gap:1rem;
-     margin-top:1rem;
-
 }
 .mensPreview__card--large--tall{
-     grid-row-start: span 2;
+     grid-row: span 3;
      position:relative;
+}
+.mensPreview__card--large--tall__text{
+     display:grid;
+     height:50%;
      width:100%;
-     height:97%;
+     position:absolute;
+     bottom:0%;
+     grid-template-columns: repeat(6,1fr);
+     grid-template-rows: 1fr 1fr 0.5fr;
 }
 .banner{
-     position: absolute;
      text-align: center;
-     bottom: 0%;
-     right:33px;
-     height:15%;
+     grid-column-start: span 6;
+     grid-row:3/4;
+     margin-bottom: -.5%;
+     right:5.5rem;
      padding: 2rem 2rem;
      font-size:var(--font-size-4);
      line-height: 1.5rem;
 }
 .mensPreview__card--large--wide{
      grid-column-start: span 2;
-     grid-row-start: span 2;
      position:relative;
-     justify-content: center;
      align-self:center;
 }
 .mensPreview__card--large--tall__image{
-     position:absolute;
-     top: 15px;
-     height:100%;
-     width: 110%;
+     grid-row-start: span 2;
+
 }
 .mensPreview__card--large--tall__button{
      position:absolute;
-     bottom:20%;
+     bottom:140%;
      z-index: 3;
 }
+.inset{
+     grid-row:2/3;
+     grid-column: 2/4;
+     justify-self: center;
+}
 .offset{
-     right:20%;
+     grid-row:2/3;
+     grid-column:4/6;
+     justify-self: center;
 }
 .mensPreview__card--small{
      grid-row-start: auto;
      position:relative;
-     top:-27px;
 }
-
-
 
 .bold{
      font-weight: var(--font-weight-7);
@@ -369,9 +411,7 @@ input, button{
      max-width:100%;
      overflow:visible;
      justify-content: center;
-     gap:1rem;
-     margin-bottom:2rem;
-
+     gap:1.5rem;
 }
 .womensPreview__card--small{
      grid-row-start: auto;
@@ -391,7 +431,6 @@ input, button{
      min-height:100%;
      padding-top:2rem;
      position:relative;
-     margin-bottom:2rem;
 }
 .aboutUs__text{
      width:35%;
@@ -405,5 +444,4 @@ input, button{
 }
 .aboutUs__information{
      font-weight:var(--font-weight-2);
-     margin-bottom: 2rem;
 }
