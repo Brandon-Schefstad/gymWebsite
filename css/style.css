@@ -382,7 +382,7 @@ input, button{
 /* #Collection Card
 /*******************************************/
 .collectionGrid{
-     background-color: bisque;
+     background-color:#00ACD0;
      display:grid;
      grid-template-columns: repeat(6,1fr);
      grid-template-rows: repeat(6,16%);
@@ -463,14 +463,12 @@ input, button{
 
 .nav__submenu__text__submenu{
      display:none;
-     
      position:relative;
-     right:-11.1rem;
+     right:-11.4rem;
      top:-1rem;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-     background-color:#C19A6C;
      color:black;
      width:100%;
+     border-radius: 1.25rem;
 }
 .nav__submenu__text:hover .nav__submenu__text__submenu {
      display:flex;
@@ -486,6 +484,10 @@ input, button{
      padding: 0.5rem 1rem;
      margin-left:-2.5rem;
      text-decoration: none;
+     border-radius: 0.5rem;
+     background-color:#C19A6C;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     
 }
 .nav__submenu__text__submenu_text:hover{
      color:#FFFFFF;
